@@ -1231,7 +1231,7 @@ on property:sys.usb.config=diag,serial_smd,serial_tty,mass_storage,file_storage
 
 
 on property:sys.usb.config=rndis,adb
-     setprop sys.usb.config rndis,diag,serial_smd,adb
+     setprop sys.usb.config rndis,${persist.sys.usb.config.extra},adb
 
 on property:sys.usb.config=rndis,none,adb
     stop adbd
